@@ -1,0 +1,36 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es2021": true
+  },
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaVersion": 13
+  },
+  "rules": {
+    "quotes": [2, "single", "avoid-escape"],
+    "max-len": [
+      "error",
+      {
+        "code": 150
+      }
+    ],
+    "class-methods-use-this": ["off"],
+    "prefer-promise-reject-errors": ["off"],
+    "no-param-reassign": ["off"],
+    "no-shadow": ["off"],
+    "import/prefer-default-export": ["off"],
+    "import/no-extraneous-dependencies": ["off"],
+    "no-use-before-define": ["off"],
+    "import/export": ["off"],
+    "camelcase": ["off"],
+    "no-return-assign": ["off"],
+    "import/no-unresolved": ["off"],
+    "import/extensions": ["off"],
+    "no-underscore-dangle": ["off"],
+    "no-useless-constructor": "off",
+    "no-empty-function": "off",
+    "no-trailing-spaces": "error"
+  }
+}
