@@ -1,4 +1,4 @@
-const OptionsError = require('optionsError');
+const OptionsError = require('../errorsHandling/optionsError');
 
 export const findOption = (source, options) => {
     let result;

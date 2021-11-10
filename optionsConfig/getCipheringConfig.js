@@ -9,4 +9,4 @@ const getCipheringConfig = () => {
         output: findOption(args, outputOption),
     };
     return config; 
-}
+};
