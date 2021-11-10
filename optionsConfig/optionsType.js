@@ -3,12 +3,12 @@ export const configOption = {
     type: 'config',
 };
 
-export const inputEnum = {
+export const inputOption = {
     value: ['i', 'input'],
     type: 'input',
 };
 
-export const outputEnum = {
+export const outputOption = {
     value: ['o', 'output'],
     type: 'output',
 }
