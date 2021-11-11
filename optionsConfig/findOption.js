@@ -9,7 +9,7 @@ module.exports = findOption = (source, options) => {
             }
         });
     });
-    if (!result.length) {
+    if (!result.length && options.isRequired) {
         throw new OptionsError(`There is no ${options.type} option.`);
     }
     if (result.length !== 1) {
