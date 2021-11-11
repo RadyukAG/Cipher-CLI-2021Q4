@@ -1,13 +1,19 @@
 const OptionsError = require('../errorsHandling/optionsError');
 
-export const findOption = (source, options) => {
-    let result;
-    options.value.some((option) => {
-        const index = source.find(option);
-        if (index >= 0) {
-            result = source[index + 1];
-            return true;
-        }
-        throw new OptionsError(`There is no ${options.type} option.`);
+module.exports = findOption = (source, options) => {
+    const result = [];
+    options.value.forEach((option) => {
+        source.forEach((input, idx, arr) => {
+            if (input === option) {
+                result.push(arr[idx + 1]);
+            }
+        });
     });
+    if (!result.length) {
+        throw new OptionsError(`There is no ${options.type} option.`);
+    }
+    if (result.length !== 1) {
+        throw new OptionsError(`There are more than 1 ${options.type}`);
+    }
+    return result[0];
 };

@@ -1,9 +1,10 @@
 const fs = require('fs');
 const OptionsError = require('../../errorsHandling/optionsError');
 
-export const inputOutputValidation = (path) => {
+module.exports = inputOutputValidation = (path) => {
     try {
-        fs.existsSync(path);
+        fs.accessSync(path);
+        return true;
     } catch {
         throw new OptionsError(`Cannot find ${path} file.`);
     }

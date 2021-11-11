@@ -1,12 +1,14 @@
 const findOption = require('./findOption');
 const { inputOption, outputOption, configOption } = require('./optionsType');
+const inputOutputValidation = require('./validation/inputOutputValidation');
 
-const getCipheringConfig = () => {
+module.exports = getCipheringConfig = () => {
     const args = process.argv.slice(2);
-    const config = {
+    const cipheringConfig = {
         config: findOption(args, configOption),
-        input: findOption(args, inputOption),
-        output: findOption(args, outputOption),
+        input: inputOutputValidation(findOption(args, inputOption)),
+        output: inputOutputValidation(findOption(args, outputOption)),
     };
-    return config; 
+    console.log(cipheringConfig);
+    return cipheringConfig; 
 };

@@ -1,3 +1,9 @@
 const process = require('process');
+const getCipheringConfig = require('./optionsConfig/getCipheringConfig');
 
-console.log(process.argv.slice(2));
+const mainProcess = () => {
+    const cipheringConfig = getCipheringConfig();
+    process.exit(1);
+};
+
+mainProcess();
