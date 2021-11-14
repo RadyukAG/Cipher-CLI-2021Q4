@@ -1,5 +1,7 @@
 const stream = require('stream');
 const { Transform } = require('stream');
+const StreamError = require('../errorsHandling/streamError');
+const CipheringError = require('../errorsHandling/cipheringError');
 
 class TextCipherer {
     constructor(config) {
@@ -9,20 +11,25 @@ class TextCipherer {
     }
 
     start() {
-        const streamsList = [];
-        streamsList.push(this.config.input);
-        this.config.config.forEach(value => {
-            this.configParse(value, streamsList);
-        });
-        streamsList.push(this.config.output);
-        stream.pipeline(...streamsList, (err) => {
-            if (err) {
-                console.error('An error has occurred: ', err);
-            }
-            else {
-                console.log('Done!');
-            }
-        })
+        try {
+            const streamsList = [];
+            streamsList.push(this.config.input);
+            this.config.config.forEach(value => {
+                this.configParse(value, streamsList);
+            });
+            streamsList.push(this.config.output);
+            stream.pipeline(...streamsList, (err) => {
+                if (err) {
+                    throw new StreamError(`An error has occurred: ${err.message}`);
+                }
+            });
+        } catch (err) {
+            if (err instanceof StreamError) {
+                throw err;
+            };
+
+            throw new CipheringError(`Error during ciphering: ${err.message}`);
+        }    
     }
 
     configParse(command, streamsList) {
