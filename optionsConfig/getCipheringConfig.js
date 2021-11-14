@@ -7,9 +7,8 @@ module.exports = getCipheringConfig = () => {
     const args = process.argv.slice(2);
     const cipheringConfig = {
         config: configValidation(findOption(args, configOption)),
-        input: inputOutputValidation(findOption(args, inputOption)),
-        output: inputOutputValidation(findOption(args, outputOption)),
+        input: inputOutputValidation(findOption(args, inputOption), true),
+        output: inputOutputValidation(findOption(args, outputOption), false),
     };
-    console.log(cipheringConfig);
     return cipheringConfig; 
 };

@@ -4,9 +4,8 @@ const TextCipherer = require('./ciphering/textCipherer');
 
 const mainProcess = () => {
     const cipheringConfig = getCipheringConfig();
-    const textCipherer = TextCipherer(cipheringConfig);
+    const textCipherer = new TextCipherer(cipheringConfig);
     textCipherer.start();
-    process.exit(1);
 };
 
 mainProcess();
