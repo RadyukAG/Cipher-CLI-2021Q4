@@ -11,7 +11,7 @@
 
 ## How to use
 
-### You can run app with command 'npm run ciphering-cli'. After that you need to pass parameters.
+### You can run app with command 'npm run cipher-cli'. After that you need to pass parameters.
 ### Cipher-CLI accept 3 options (short alias and full name):
 ### -c, --config: config for ciphers Config is a string with pattern {XY(-)}n, where:
 * X is a cipher mark:
@@ -25,7 +25,8 @@
 ### -o, --output: a path to output file
 ### For example, config "C1-C1-R0-A" means "encode by Caesar cipher => encode by Caesar cipher => decode by ROT-8 => use Atbash"
 
-### All parameters should pass after '--'. 
+### All parameters should pass after '--'.
+### If you wanna use input.txt, output.txt or else input or output text files, you'll have to create it. 
 ## Examples
 
 ```bash
