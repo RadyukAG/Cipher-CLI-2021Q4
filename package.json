@@ -1,0 +1,29 @@
+{
+  "name": "cipher-cli",
+  "version": "1.0.0",
+  "description": "Study project. Cipher CLI Tool.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cipher-cli": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RadyukAG/Cipher-CLI-2021Q4.git"
+  },
+  "keywords": [
+    "nodejs",
+    "cipher"
+  ],
+  "author": "Alexey Radziuk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RadyukAG/Cipher-CLI-2021Q4/issues"
+  },
+  "homepage": "https://github.com/RadyukAG/Cipher-CLI-2021Q4#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^8.2.0",
+    "prettier": "2.4.1"
+  }
+}
