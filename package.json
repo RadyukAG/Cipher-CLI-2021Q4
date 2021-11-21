@@ -4,7 +4,7 @@
   "description": "Study project. Cipher CLI Tool.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "./node_modules/.bin/jest --coverage",
     "cipher-cli": "node index.js"
   },
   "repository": {
@@ -21,9 +21,7 @@
     "url": "https://github.com/RadyukAG/Cipher-CLI-2021Q4/issues"
   },
   "homepage": "https://github.com/RadyukAG/Cipher-CLI-2021Q4#readme",
-  "dependencies": {
-    "mock-argv": "^2.0.6"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@eslint/eslintrc": "^1.0.4",
     "eslint": "^8.2.0",
