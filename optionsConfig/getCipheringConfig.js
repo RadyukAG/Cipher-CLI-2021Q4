@@ -10,9 +10,9 @@ module.exports = getCipheringConfig = () => {
             config: configValidation(findOption(args, configOption)),
             input: inputOutputValidation(findOption(args, inputOption), true),
             output: inputOutputValidation(findOption(args, outputOption), false),
-        };    
+        };
         return cipheringConfig;
     } catch (err) {
         throw err;
-    }    
+    }
 };

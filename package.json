@@ -21,7 +21,9 @@
     "url": "https://github.com/RadyukAG/Cipher-CLI-2021Q4/issues"
   },
   "homepage": "https://github.com/RadyukAG/Cipher-CLI-2021Q4#readme",
-  "dependencies": {},
+  "dependencies": {
+    "mock-argv": "^2.0.6"
+  },
   "devDependencies": {
     "@eslint/eslintrc": "^1.0.4",
     "eslint": "^8.2.0",
